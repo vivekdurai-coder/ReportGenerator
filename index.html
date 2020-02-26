@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<div id="Report_Generator">
+    <h4>Report Generator [USE ONLY IN GOOGLE CHROME]</h4>
+    <hr>
+    <div id="Look_Feel">
+        Hi, <input type="text" id="to_name" placeholder="TO NAME"><br>
+        Date: <input type="date" id="report_date" placeholder="DATE"><br>
+        Report Timing: <input type="time" placeholder="FROM" id="report_from"> <input type="time" placeholder="TO" id="report_to">[PST] 
+        <button onclick="basic_info()">ADD BASIC INFORMATION</button>
+        <button onclick="clear_basic()">CLEAR</button>
+        <hr>
+        LoggedIn Information: 
+        <input type="text" id="agent_name" placeholder="ANALYST NAME">
+        <input type="text" id="agent_login_id"placeholder="LOGIN ID">
+        <input type="text" id="agent_extension" placeholder="EXTENSION">
+        <button onclick="analyst_loggedin()">ADD LOGGED IN DETAIL</button>
+        <button onclick="clear_loggedin()">CLEAR</button>
+        <hr>
+        Break Information: 
+        <input placeholder="NAME" type="text" id="break_name">
+        <input placeholder="FROM"type="time" id="break_from">
+        <input placeholder="TO" type="time" id="break_to">
+        <input placeholder="TYPE OF BREAK"type="text" id="break_type">[IST]
+        <button id="break_button" onclick="break_result()">ADD BREAK</button>
+        <button onclick="clear_break()" >CLEAR</button>
+        <hr>
+        Abandon Call Information:
+        <textarea placeholder="ABANDON CALL INFORMATION" id="Abandon" cols="50%" rows="3%"></textarea>
+        <button onclick="Abandon_Info()">ADD ABANDON DETAIL</button>
+        <button onclick="clear_Abandon()">CLEAR</button>
+        <hr>
+        Long Call Information:
+        <input type="text" id="TicketNumber" placeholder="TICKET NUMBER">
+        <input type="text" id="Aname" placeholder="AGENT NAME" >
+        <textarea placeholder="REASON" id="Reason" cols="50%" rows="3%"></textarea>
+        <button onclick="long_call()">ADD LONG CALL DETAIL</button>
+        <button onclick="clear_Long()">CLEAR</button>
+        <hr>
+        Any Important Note [Not Mandatory To Input] ? :
+        <textarea placeholder="IMPORTANT NOTE" id="Note" cols="50%" rows="3%"></textarea>
+        <button onclick="Note()">ADD AN IMPORTANT NOTE</button>
+        <button onclick="clear_Note()">CLEAR</button>
+    </div>
+    <h5> [For any queries feel free to drop an email to <a href="mailto:vivek.durai@unionbank.com">Vivek Durai</a>] </h5>
+    <hr>
+</div>
+    <div id="Generated_result">
+       
+        <div id="basic_information">
+
+        </div>
+        <br>
+        <br>
+        <b id="Title0" hidden>IMPORTANT NOTE</b>
+        <div id="Note_Result" hidden>
+
+        </div>
+        <br>
+        <br>
+        <b id="Title1" hidden>ANALYST LOGGED IN TODAY</b>
+        <br>
+        <br>
+        <table id="login_info" hidden >
+                <tr><th>AGENT NAME</th>
+                    <th>LOGIN ID</th>
+                    <th>EXTENSION</th>
+                </tr>
+        </table>
+        <br>
+        <b id="Title2" hidden>BREAK TIME </b>
+        <br>
+        <br>
+    <table id="break_result" hidden>
+        <tr><th>NAME</th>
+            <th>TIME</th>
+            <th>TYPE</th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <b id="Title4" hidden>ABANDON CALLS</b>
+    <br>
+    <br>
+    <div id="abandon_result" hidden></div>
+    
+    <b id="Title3" hidden> LONG CALL REPORT </b>
+    <br>
+    <br>
+    <table id="longcall_result" hidden>
+            <tr><th>TICKET NUMBER</th>
+                <th>ANALYST NAME</th>
+                <th>REASON</th>
+            </tr>
+    </table>
+    </div> 
+</body>
+</html>

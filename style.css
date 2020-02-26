@@ -1,0 +1,66 @@
+input, textarea{
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    margin: 1px;
+    resize: none;
+}
+button{
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 1px;
+}
+table,tr,td,th{
+    border: #063852 solid;
+    border-collapse: collapse;
+    padding: 5px;
+    background: white;
+    text-align: center;
+    font-weight: 700;
+}
+th{
+    color:whitesmoke;
+    background: #063852;
+}
+#basic_information{
+    font-size: 17px;
+    font-family: georgia;
+    font-weight: bold;
+}
+#Report_Generator{
+    width: 98%;
+    /* border: solid black; */
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#Generated_result{
+    padding: 10px;
+    /* border: solid; */
+    border-radius: 25px;
+    margin-top: 10px;
+
+
+}
+
+#longcall_result{
+  word-wrap: break-word;
+  width: 50%;
+}
+
+#Look_Feel{
+    border-radius: 30px;
+    padding: 10px;
+    background: #E4EA86;
+    color: black;
+    font-weight: 900;
+}
+
+#abandon_result,#Note_Result {
+    font-weight: 600;
+    width: 50%;
+    word-break: break-word;
+    padding: 1%;
+    text-transform: capitalize;
+}
